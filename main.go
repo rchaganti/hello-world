@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// call the root command's Execute function
 	err := cmd.Execute()
 	if err != nil {
 		log.Fatal(err)
