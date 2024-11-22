@@ -21,7 +21,7 @@ var rootCmd = &cobra.Command{
 		} else {
 			name = args[0]
 		}
-		fmt.Printf("Hello, %s!\n", name)
+		fmt.Printf("Hello, %s. Welcome to the Go world!\n", name)
 	},
 }
 
