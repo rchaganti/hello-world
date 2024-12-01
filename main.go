@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"time"
 
 	"github.com/rchaganti/hello-world/cmd"
 )
@@ -14,6 +15,7 @@ var (
 
 func main() {
 	// Set the version information
+	date = time.Now().Format(time.RFC3339)
 	cmd.SetVersionInfo(version, commit, date)
 
 	// call the root command's Execute function
