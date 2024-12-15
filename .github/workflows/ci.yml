@@ -1,4 +1,4 @@
-name: ci
+name: release
 on:
   push:
     tags:
@@ -17,4 +17,8 @@ jobs:
       uses: goreleaser/goreleaser-action@v1
       with:
         version: latest
-        args: release --snapshot --clean
+        args: release --clean
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Update new version in krew-index
+      uses: rajatjindal/krew-release-bot@v0.0.25
